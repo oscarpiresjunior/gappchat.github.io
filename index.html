@@ -1,47 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="https://www.brasix.com.br/wp-content/uploads/2025/06/favcon-gappchat.png" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GAPPCHAT - Agentes de IA para Pequenas Empresas</title>
+    <title>GAPPCHAT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
-            },
-            colors: {
-                brand: {
-                    green: '#34A853',
-                    yellow: '#FBBC05',
-                    blue: '#4285F4',
-                    orange: '#F9AB00',
-                }
-            }
-          }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .sidebar {
+        -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+      @-webkit-keyframes slide-top {
+        0% {
+          -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+        }
+        100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
         }
       }
-    </script>
+      @keyframes slide-top {
+        0% {
+          -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+        }
+        100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+      .height-transition {
+        transition: max-height 0.5s ease-in-out;
+      }
+      .admin-gradient {
+        background: linear-gradient(to right, #f8fafc, #f1f5f9);
+      }
+    </style>
   <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "react/": "https://esm.sh/react@^19.1.0/",
     "react": "https://esm.sh/react@^19.1.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.7.0"
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/"
   }
 }
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-slate-50 antialiased">
+  <body class="bg-white text-gray-800">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>
